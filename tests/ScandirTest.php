@@ -3,7 +3,7 @@
 namespace Siestacat\PhpScandir\Tests;
 
 use PHPUnit\Framework\TestCase;
-use function Siestacat\PhpScandir\scanrdir;
+use Siestacat\PhpScandir\PhpScandir;
 
 class ScandirTest extends TestCase
 {
@@ -12,7 +12,7 @@ class ScandirTest extends TestCase
 
         $files_count = 0;
 
-        scanrdir(__DIR__ . '/dirtest', function(string $filepath) use (&$files_count) {
+        PhpScandir::scan(__DIR__ . '/dirtest', function(string $filepath) use (&$files_count) {
             $files_count++;
         });
 

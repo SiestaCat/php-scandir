@@ -4,7 +4,9 @@
     "type": "library",
     "license": "Apache-2.0",
     "autoload": {
-        "files": ["src/scanrdir.php"]
+        "psr-4": {
+            "Siestacat\\PhpScandir\\": "src/"
+        }
     },
     "authors": [
         {
